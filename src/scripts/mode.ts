@@ -11,9 +11,7 @@ let scene: THREE.Scene;
 let camera: THREE.PerspectiveCamera;
 let renderer: THREE.WebGLRenderer;
 let mixer: THREE.AnimationMixer | null = null;
-let bearModel: THREE.Object3D | null = null;
 let screenWidth = window.innerWidth;
-let screenHeight = window.innerHeight;
 
 const clock = new THREE.Clock();
 
@@ -108,7 +106,6 @@ function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   screenWidth = window.innerWidth;
-  screenHeight = window.innerHeight;
 }
 
 function animate() {
