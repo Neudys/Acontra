@@ -14,39 +14,42 @@
       <!-- NAVBAR -->
       <nav
         id="navbar"
-        class="fixed backdrop-blur-md top-0 left-0 right-0 z-50 transform transition-all duration-300 bg-transparent py-5"
+        class="fixed backdrop-blur-md top-0 left-0 right-0 z-50 transform transition-all duration-300 bg-transparent py-5 gsap-navbar"
       >
         <!-- El nav es fixed, no ocupa espacio en el flujo del DOM -->
         <div
-          class="container mx-auto px-4 md:px-6 flex items-center justify-between"
+          class="container mx-auto px-4 md:px-6 flex items-center justify-between gsap-navbar-inner"
         >
-          <a href="/" class="text-xl md:text-2xl font-bold tracking-tight z-50">
+          <a
+            href="/"
+            class="text-xl md:text-2xl font-bold tracking-tight z-50 gsap-navbar-logo"
+          >
             A CONTRA<span class="text-primary">.</span>
           </a>
 
           <!-- Desktop Navigation -->
-          <div class="hidden md:flex items-center gap-8">
+          <div class="hidden md:flex items-center gap-8 gsap-navbar-links">
             <a
               href="#home"
-              class="text-sm font-medium hover:text-primary transition-colors"
+              class="text-sm font-medium hover:text-primary transition-colors gsap-navbar-link"
             >
               Home
             </a>
             <a
               href="#info"
-              class="text-sm font-medium hover:text-primary transition-colors"
+              class="text-sm font-medium hover:text-primary transition-colors gsap-navbar-link"
             >
               Info
             </a>
             <a
               href="#about"
-              class="text-sm font-medium hover:text-primary transition-colors"
+              class="text-sm font-medium hover:text-primary transition-colors gsap-navbar-link"
             >
               About Us
             </a>
             <a
               href="#contact"
-              class="rounded-full px-6 py-2 text-sm font-medium shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all bg-primary text-white"
+              class="rounded-full px-6 py-2 text-sm font-medium shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all bg-primary text-white gsap-navbar-cta"
             >
               Contact
             </a>
@@ -56,17 +59,17 @@
 
       <section
         id="home"
-        class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden"
+        class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden gsap-hero"
       >
         <!-- Background Gradients -->
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div class="grid gap-10 items-center min-[1250px]:grid-cols-2">
             <div
-              class="flex flex-col gap-6 max-w-2xl mx-auto min-[1250px]:mx-0 animate-in fade-in slide-in-from-bottom-10 duration-700 text-center min-[1250px]:text-left"
+              class="flex flex-col gap-6 max-w-2xl mx-auto min-[1250px]:mx-0 animate-in fade-in slide-in-from-bottom-10 duration-700 text-center min-[1250px]:text-left gsap-hero-content"
             >
               <div
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-secondary text-xs font-medium text-foreground/80 w-fit mx-auto min-[1250px]:mx-0"
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-secondary text-xs font-medium text-foreground/80 w-fit mx-auto min-[1250px]:mx-0 gsap-hero-pill"
               >
                 <span class="relative flex h-2 w-2">
                   <span
@@ -80,7 +83,7 @@
               </div>
 
               <h1
-                class="text-4xl sm:text-5xl md:text-6xl min-[1250px]:text-7xl font-bold tracking-tight leading-[1.1]"
+                class="text-4xl sm:text-5xl md:text-6xl min-[1250px]:text-7xl font-bold tracking-tight leading-[1.1] gsap-hero-title"
               >
                 Estrategia digital en la que puedes
                 <span class="text-primary relative inline-block">
@@ -101,24 +104,24 @@
               </h1>
 
               <p
-                class="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto min-[1250px]:mx-0"
+                class="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto min-[1250px]:mx-0 gsap-hero-subtitle"
               >
                 No necesitas una agencia, necesitas resultados con carácter.
                 Creamos experiencias digitales que conectan y venden.
               </p>
 
               <div
-                class="flex flex-col sm:flex-row gap-4 mt-4 justify-center min-[1250px]:justify-start"
+                class="flex flex-col sm:flex-row gap-4 mt-4 justify-center min-[1250px]:justify-start gsap-hero-ctas"
               >
                 <a
                   href="#contacto"
-                  class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-1 transition-all bg-primary text-white font-medium w-full sm:w-auto"
+                  class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-1 transition-all bg-primary text-white font-medium w-full sm:w-auto gsap-hero-cta-primary"
                 >
                   Contáctanos
                 </a>
                 <a
                   href="#contacto"
-                  class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base border-2 border-primary/60 bg-transparent hover:bg-secondary/50 text-foreground font-medium w-full sm:w-auto"
+                  class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base border-2 border-primary/60 bg-transparent hover:bg-secondary/50 text-foreground font-medium w-full sm:w-auto gsap-hero-cta-secondary"
                 >
                   Saber más
                 </a>
@@ -127,10 +130,11 @@
           </div>
         </div>
       </section>
+
       <!-- MOBILE / TABLET ( < xl ) -->
-      <div class="xl:hidden w-full flex justify-center px-4 py-12">
+      <div class="xl:hidden w-full flex justify-center px-4 py-12 gsap-mascota">
         <div
-          class="relative w-full max-w-[560px] rounded-[2.5rem] overflow-hidden bg-secondary/30 border border-amber-100 shadow-xl"
+          class="relative w-full max-w-[560px] rounded-[2.5rem] overflow-hidden bg-secondary/30 border border-amber-100 shadow-xl gsap-mascota-card"
         >
           <div
             class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/15 blur-[70px]"
@@ -139,10 +143,10 @@
             class="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-amber-200/40 blur-[80px]"
           ></div>
 
-          <div class="relative p-7 sm:p-9">
+          <div class="relative p-7 sm:p-9 gsap-mascota-content">
             <div class="flex items-center justify-between gap-4">
               <div
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider"
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider gsap-mascota-pill"
               >
                 <span class="relative flex h-2 w-2">
                   <span
@@ -157,25 +161,25 @@
             </div>
 
             <h3
-              class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-foreground"
+              class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-foreground gsap-mascota-title"
             >
               Conoce a nuestra mascota<span class="text-primary">.</span>
             </h3>
 
             <p
-              class="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed"
+              class="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed gsap-mascota-text"
             >
               Un vistazo rápido a nuestro estilo: diseño, tecnología y carácter
               en 3D.
             </p>
 
-            <div class="mt-6">
+            <div class="mt-6 gsap-mascota-canvaswrap">
               <div
                 class="relative w-full aspect-square rounded-3xl overflow-hidden bg-amber-50/30 border border-amber-100 shadow-md"
               >
                 <canvas
                   id="canvas-mobile"
-                  class="absolute inset-0 w-full h-full block"
+                  class="absolute inset-0 w-full h-full block gsap-canvas-mobile"
                 ></canvas>
 
                 <div
@@ -188,16 +192,16 @@
               </div>
             </div>
 
-            <div class="mt-6 flex gap-3">
+            <div class="mt-6 flex gap-3 gsap-mascota-ctas">
               <a
                 href="#contact"
-                class="inline-flex items-center justify-center rounded-full px-6 h-11 text-sm font-medium bg-primary text-white shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all w-full"
+                class="inline-flex items-center justify-center rounded-full px-6 h-11 text-sm font-medium bg-primary text-white shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all w-full gsap-mascota-cta-primary"
               >
                 Quiero uno así
               </a>
               <a
                 href="#que-hacemos"
-                class="inline-flex items-center justify-center rounded-full px-6 h-11 text-sm font-medium border-2 border-primary/60 bg-transparent hover:bg-secondary/40 transition-all w-full"
+                class="inline-flex items-center justify-center rounded-full px-6 h-11 text-sm font-medium border-2 border-primary/60 bg-transparent hover:bg-secondary/40 transition-all w-full gsap-mascota-cta-secondary"
               >
                 Ver servicios
               </a>
@@ -209,7 +213,7 @@
       <!-- DESKTOP ( >= xl ) -->
       <canvas
         id="canvas-desktop"
-        class="pointer-events-none fixed inset-0 w-screen h-screen hidden xl:block"
+        class="pointer-events-none fixed inset-0 w-screen h-screen hidden xl:block gsap-canvas-desktop"
       ></canvas>
 
       <!-- 2 - RELLENO -->
@@ -221,27 +225,31 @@
       <div id="rellenoEnd1" class="h-[1vh]"></div>
 
       <!-- 3 - QUÉ HACEMOS -->
-      <section id="que-hacemos" class="py-20 relative">
+      <section id="que-hacemos" class="py-20 relative gsap-services">
         <div class="container mx-auto px-4 md:px-6">
           <!-- Bloque completo alineado a la derecha en desktop -->
-          <div class="mx-4 xl:max-w-160 xl:ml-auto">
-            <div class="text-center max-w-2xl md:ml-auto mx-auto mb-16">
-              <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          <div class="mx-4 xl:max-w-160 xl:ml-auto gsap-services-wrap">
+            <div
+              class="text-center max-w-2xl md:ml-auto mx-auto mb-16 gsap-services-header"
+            >
+              <h2
+                class="text-3xl md:text-4xl font-bold mb-4 gsap-services-title"
+              >
                 ¿Qué hacemos en solo 20 segundos?
               </h2>
-              <p class="text-muted-foreground text-lg">
+              <p class="text-muted-foreground text-lg gsap-services-subtitle">
                 Optimizamos cada aspecto de tu presencia digital y operativa con
                 soluciones precisas.
               </p>
             </div>
 
-            <div class="grid md:grid-cols-1 gap-8 ml-auto">
+            <div class="grid md:grid-cols-1 gap-8 ml-auto gsap-services-grid">
               <!-- Card 1 - Gestión de Marketing -->
               <div
-                class="group relative bg-card hover:bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-2 text-center"
+                class="group relative bg-card hover:bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-2 text-center gsap-service-card"
               >
                 <div
-                  class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto"
+                  class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto gsap-service-icon"
                 >
                   <!-- Icono: BarChart -->
                   <svg
@@ -268,7 +276,7 @@
 
                 <a
                   href="#contact"
-                  class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer"
+                  class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer gsap-service-link"
                 >
                   <span>Saber más</span>
                   <svg
@@ -293,10 +301,10 @@
 
               <!-- Card 2 - Desarrollo Web 3D -->
               <div
-                class="group relative bg-card hover:bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-2 text-center"
+                class="group relative bg-card hover:bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-2 text-center gsap-service-card"
               >
                 <div
-                  class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto"
+                  class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto gsap-service-icon"
                 >
                   <!-- Icono: Monitor -->
                   <svg
@@ -322,7 +330,7 @@
 
                 <a
                   href="#contact"
-                  class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer"
+                  class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer gsap-service-link"
                 >
                   <span>Saber más</span>
                   <svg
@@ -347,10 +355,10 @@
 
               <!-- Card 3 - Gestión de RRHH -->
               <div
-                class="group relative bg-card hover:bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-2 text-center"
+                class="group relative bg-card hover:bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-2 text-center gsap-service-card"
               >
                 <div
-                  class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto"
+                  class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto gsap-service-icon"
                 >
                   <!-- Icono: Users -->
                   <svg
@@ -377,7 +385,7 @@
 
                 <a
                   href="#contact"
-                  class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer"
+                  class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer gsap-service-link"
                 >
                   <span>Saber más</span>
                   <svg
@@ -412,41 +420,42 @@
       ></section>
       <div id="rellenoEnd2" class="h-[1vh]"></div>
 
-      <section id="info" class="py-20 space-y-24">
+      <section id="info" class="py-20 space-y-24 gsap-info">
         <!-- Web 3D Section -->
         <div
-          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2"
+          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2 gsap-info-block"
         >
           <div
-            class="order-1 lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10"
+            class="order-1 lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10 gsap-info-card"
           >
             <!-- Texto -->
-            <div class="space-y-5 sm:space-y-6">
+            <div
+              class="flex justify-center items-center flex-col text-center space-y-5 sm:space-y-6 gsap-info-content"
+            >
               <div
-                class="inline-block px-3 py-1 rounded-full bg-orange-100 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider"
+                class="inline-block px-3 py-1 rounded-full bg-orange-100 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider gsap-info-pill"
               >
                 Desarrollo
               </div>
               <h2
-                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight gsap-info-title"
               >
                 Desarrollo Web 3D
               </h2>
               <p
-                class="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl"
+                class="text-center sm:text-lg text-muted-foreground leading-relaxed max-w-xl self-center gsap-info-text"
               >
                 Transformamos la web plana en experiencias espaciales. Desde el
                 modelado hasta la implementación, creamos entornos digitales que
                 cuentan historias y definen marcas.
               </p>
-              <ul class="space-y-3 sm:space-y-4">
+              <ul class="space-y-3 sm:space-y-4 gsap-info-list">
                 <li
-                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium gsap-info-item"
                 >
                   <div
                     class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
-                    <!-- Lucide Check -->
                     <svg
                       class="w-3.5 h-3.5 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
@@ -463,8 +472,9 @@
                   </div>
                   <span>Modelado de alta fidelidad</span>
                 </li>
+
                 <li
-                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium gsap-info-item"
                 >
                   <div
                     class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
@@ -485,8 +495,9 @@
                   </div>
                   <span>Experiencias interactivas</span>
                 </li>
+
                 <li
-                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium gsap-info-item"
                 >
                   <div
                     class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
@@ -507,8 +518,9 @@
                   </div>
                   <span>Optimización de rendimiento</span>
                 </li>
+
                 <li
-                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium gsap-info-item"
                 >
                   <div
                     class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
@@ -536,39 +548,37 @@
 
         <!-- RRHH Section -->
         <div
-          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2"
+          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2 gsap-info-block"
         >
           <div
-            class="order-1 lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10"
+            class="order-1 lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10 gsap-info-card"
           >
-            <!-- Texto -->
-            <div class="space-y-5 sm:space-y-6">
+            <div
+              class="flex justify-center items-center flex-col space-y-5 sm:space-y-6 gsap-info-content"
+            >
               <div
-                class="inline-block px-3 py-1 rounded-full text-yellow-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-yellow-100"
+                class="inline-block px-3 py-1 rounded-full text-yellow-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-yellow-100 gsap-info-pill"
               >
                 Talento
               </div>
               <h2
-                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 leading-tight"
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 leading-tight gsap-info-title"
               >
                 Gestión de RRHH
               </h2>
               <p
-                class="text-base sm:text-lg text-muted-foreground leading-relaxed mt-2 max-w-xl"
+                class="text-base sm:text-lg text-muted-foreground leading-relaxed mt-2 max-w-xl gsap-info-text"
               >
                 Encontrar talento real que encaja de verdad con tu empresa no es
                 suerte, es estrategia. Utilizamos metodologías modernas para
                 conectar empresas con las personas adecuadas.
               </p>
 
-              <!-- Lista con iconos (mismos colores que Marketing) -->
-              <ul class="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
-                <!-- Scouting -->
-                <li class="flex items-start gap-3">
+              <ul class="mt-4 sm:mt-6 space-y-3 sm:space-y-4 gsap-info-list">
+                <li class="flex items-start gap-3 gsap-info-item">
                   <span
                     class="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 flex-shrink-0"
                   >
-                    <!-- Lucide Users -->
                     <svg
                       class="w-3.5 h-3.5 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
@@ -592,12 +602,10 @@
                   </div>
                 </li>
 
-                <!-- Selección basada en datos -->
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 gsap-info-item">
                   <span
                     class="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 flex-shrink-0"
                   >
-                    <!-- Lucide LineChart -->
                     <svg
                       class="w-3.5 h-3.5 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
@@ -619,12 +627,10 @@
                   </div>
                 </li>
 
-                <!-- Onboarding y seguimiento -->
-                <li class="flex items-start gap-3">
+                <li class="flex items-start gap-3 gsap-info-item">
                   <span
                     class="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 flex-shrink-0"
                   >
-                    <!-- Lucide CheckCircle -->
                     <svg
                       class="w-3.5 h-3.5 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
@@ -652,39 +658,39 @@
 
         <!-- Marketing Section -->
         <div
-          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2"
+          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2 gsap-info-block"
         >
           <div
-            class="order-1 text-center lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10"
+            class="order-1 text-center lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10 gsap-info-card"
           >
-            <!-- Texto marketing -->
-            <div class="space-y-5 text-centersm:space-y-6">
+            <div
+              class="flex justify-center items-center flex-col space-y-5 text-centersm:space-y-6 gsap-info-content"
+            >
               <div
-                class="inline-block text-center px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider"
+                class="inline-block text-center px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider gsap-info-pill"
               >
                 Marketing
               </div>
               <h2
-                class="text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 leading-tight"
+                class="text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 leading-tight gsap-info-title"
               >
                 Estrategia de Marketing Digital
               </h2>
               <p
-                class="text-center sm:text-lg text-muted-foreground leading-relaxed mt-3 max-w-xl"
+                class="text-center sm:text-lg text-muted-foreground leading-relaxed mt-3 max-w-xl gsap-info-text"
               >
                 Diseñamos campañas que no solo generan clics, sino clientes
                 recurrentes. Mezclamos creatividad y datos para que cada euro
                 invertido tenga un retorno claro.
               </p>
 
-              <ul class="mt-4 sm:mt-5 space-y-3 sm:space-y-4">
+              <ul class="mt-4 sm:mt-5 space-y-3 sm:space-y-4 gsap-info-list">
                 <li
-                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium gsap-info-item"
                 >
                   <div
                     class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
-                    <!-- Lucide Megaphone -->
                     <svg
                       class="w-3.5 h-3.5 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
@@ -703,13 +709,13 @@
                   </div>
                   <span>Mensajes que conectan con tu público</span>
                 </li>
+
                 <li
-                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium gsap-info-item"
                 >
                   <div
                     class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
-                    <!-- LineChart -->
                     <svg
                       class="w-3.5 h-3.5 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
@@ -726,13 +732,13 @@
                   </div>
                   <span>Optimización constante basada en datos</span>
                 </li>
+
                 <li
-                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium gsap-info-item"
                 >
                   <div
                     class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
-                    <!-- Lucide Users -->
                     <svg
                       class="w-3.5 h-3.5 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
@@ -768,7 +774,7 @@
       <!-- 11 - QUIÉNES SOMOS -->
       <section
         id="about"
-        class="py-24 bg-secondary/30 relative overflow-hidden"
+        class="py-24 bg-secondary/30 relative overflow-hidden gsap-about"
       >
         <div
           class="absolute top-0 right-0 w-[400px] h-[400px] bg-white/40 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3"
@@ -776,21 +782,23 @@
 
         <div class="container mx-auto px-4 md:px-6 relative z-10">
           <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div class="gsap-about-left">
               <h2
-                class="text-sm font-bold tracking-widest text-primary uppercase mb-3"
+                class="text-sm font-bold tracking-widest text-primary uppercase mb-3 gsap-about-eyebrow"
               >
                 ¿Quiénes somos?
               </h2>
-              <h3 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+              <h3
+                class="text-4xl md:text-5xl font-bold mb-8 leading-tight gsap-about-title"
+              >
                 No somos una agencia tradicional. <br />
-                <span class="text-muted-foreground">
-                  Somos tu socio estratégico.
-                </span>
+                <span class="text-muted-foreground"
+                  >Somos tu socio estratégico.</span
+                >
               </h3>
 
               <div
-                class="space-y-6 text-lg text-muted-foreground leading-relaxed"
+                class="space-y-6 text-lg text-muted-foreground leading-relaxed gsap-about-copy"
               >
                 <p>
                   En <span class="font-bold text-foreground">A CONTRA</span>, no
@@ -805,7 +813,7 @@
               </div>
 
               <div
-                class="mt-10 p-6 bg-background rounded-2xl border-l-4 border-primary shadow-sm"
+                class="mt-10 p-6 bg-background rounded-2xl border-l-4 border-primary shadow-sm gsap-about-quote"
               >
                 <p class="text-xl font-bold italic text-foreground">
                   "ASÍ DE SIMPLE."
@@ -813,25 +821,26 @@
               </div>
             </div>
 
-            <div class="relative flex justify-center lg:justify-end">
+            <div
+              class="relative flex justify-center lg:justify-end gsap-about-right"
+            >
               <div
                 class="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px]"
               >
                 <div
-                  class="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent rounded-[3rem] transform rotate-3 scale-95"
+                  class="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent rounded-[3rem] transform rotate-3 scale-95 gsap-about-bg"
                 ></div>
                 <div
-                  class="absolute inset-0 bg-background rounded-[3rem] shadow-2xl overflow-hidden border border-white/50 flex items-center justify-center"
+                  class="absolute inset-0 bg-background rounded-[3rem] shadow-2xl overflow-hidden border border-white/50 flex items-center justify-center gsap-about-frame"
                 >
                   <img
                     src="/3d-abstract-geometric-shapes-glass-gold-orange-com.jpg"
                     alt="Abstract 3D Art"
-                    class="object-cover opacity-90 hover:scale-105 transition-transform duration-700 w-full h-full"
+                    class="object-cover opacity-90 hover:scale-105 transition-transform duration-700 w-full h-full gsap-about-img"
                   />
 
-                  <!-- Small decorative bear accent -->
                   <div
-                    class="absolute bottom-6 right-6 w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl border border-white/40 flex items-center justify-center shadow-lg"
+                    class="absolute bottom-6 right-6 w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl border border-white/40 flex items-center justify-center shadow-lg gsap-about-accent"
                   >
                     <span class="text-4xl">🐻</span>
                   </div>
@@ -851,26 +860,34 @@
       <div id="rellenoEnd4" class="h-[1vh]"></div>
 
       <!-- 13 - CONTACTO -->
-      <section id="contact" class="py-24">
+      <section id="contact" class="py-24 gsap-contact">
         <div class="container mx-auto px-4 md:px-6">
-          <div class="flex justify-end">
+          <div class="flex justify-center xl:justify-end">
             <div
-              class="w-full bg-secondary/30 lg:max-w-xl rounded-[2.5rem] p-8 md:p-10 shadow-lg border border-amber-100"
+              class="w-full bg-secondary/30 lg:max-w-xl rounded-[2.5rem] p-8 md:p-10 shadow-lg border border-amber-100 gsap-contact-card"
             >
               <p
-                class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-3"
+                class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-3 gsap-contact-eyebrow"
               >
                 Contacto
               </p>
-              <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2
+                class="text-3xl md:text-4xl font-bold text-foreground mb-4 gsap-contact-title"
+              >
                 Vamos, no te quedes atrás.
               </h2>
-              <p class="text-base md:text-lg text-muted-foreground mb-8">
+              <p
+                class="text-base md:text-lg text-muted-foreground mb-8 gsap-contact-text"
+              >
                 Cuéntanos qué necesitas y te responderemos en menos de 48 horas.
                 Es el primer paso para poner tu proyecto en marcha.
               </p>
 
-              <form id="contact-form" class="space-y-6" novalidate>
+              <form
+                id="contact-form"
+                class="space-y-6 gsap-contact-form"
+                novalidate
+              >
                 <!-- Honeypot anti-bots -->
                 <input
                   type="text"
@@ -881,8 +898,10 @@
                   aria-hidden="true"
                 />
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div class="space-y-1">
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-4 gsap-contact-row"
+                >
+                  <div class="space-y-1 gsap-contact-field">
                     <label
                       for="contact-name"
                       class="text-xs tracking-wider text-muted-foreground uppercase"
@@ -899,7 +918,7 @@
                     />
                   </div>
 
-                  <div class="space-y-1">
+                  <div class="space-y-1 gsap-contact-field">
                     <label
                       for="contact-email"
                       class="text-xs tracking-wider text-muted-foreground uppercase"
@@ -918,7 +937,7 @@
                   </div>
                 </div>
 
-                <div class="space-y-1">
+                <div class="space-y-1 gsap-contact-field">
                   <label
                     for="contact-service"
                     class="text-xs tracking-wider text-muted-foreground uppercase"
@@ -942,7 +961,7 @@
                   </select>
                 </div>
 
-                <div class="space-y-1">
+                <div class="space-y-1 gsap-contact-field">
                   <label
                     for="contact-message"
                     class="text-xs tracking-wider text-muted-foreground uppercase"
@@ -960,11 +979,11 @@
                   ></textarea>
                 </div>
 
-                <div class="pt-2">
+                <div class="pt-2 gsap-contact-actions">
                   <button
                     id="contact-submit"
                     type="submit"
-                    class="w-full h-12 rounded-full text-base font-medium px-6 bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                    class="w-full h-12 rounded-full text-base font-medium px-6 bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90 transition disabled:opacity-60 disabled:cursor-not-allowed gsap-contact-submit"
                   >
                     Enviar mensaje
                   </button>

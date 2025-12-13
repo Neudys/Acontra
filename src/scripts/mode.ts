@@ -66,7 +66,8 @@ function updateControlsTargetAndDistance() {
 
 function initializeBearModelPosition(bearModel: THREE.Object3D) {
   if (screenWidth <= 1800 && screenWidth > 1280) {
-    bearModel.position.set(1, 0.5, 0);
+    // bearModel.position.set(1, 0.5, 0);
+    bearModel.position.set(1.5, 0.7, 0);
     bearModel.rotation.y = 0;
   } else if (screenWidth > 1800) {
     bearModel.position.set(1.6, 0.5, 0);
@@ -133,7 +134,7 @@ function init() {
   const isMobile = window.innerWidth < 1280;
 
   if (isMobile) {
-    camera.position.set(0,1,4);// por ejemplo, hacia tu oso en móvil
+    camera.position.set(0, 1, 4); // por ejemplo, hacia tu oso en móvil
   } else {
     camera.position.set(4, 4, 4);
     camera.lookAt(0, 1, 0);
@@ -183,7 +184,7 @@ function init() {
       setupMobileOrbitControls();
 
       // Scroll animations solo desktop/tablet
-      if (screenWidth <= 1800 && screenWidth > 1280) {
+      if (screenWidth <= 1800 && screenWidth >= 1280) {
         setupScrollAnimationsReduced(camera, bearModel);
       } else if (screenWidth > 1800) {
         setupScrollAnimations(camera, bearModel);
