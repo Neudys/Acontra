@@ -21,7 +21,6 @@ export function setupScrollAnimationsReduced(
       start: "top center",
       end: "bottom center",
       scrub: true,
-      markers: true,
     },
     defaults: { ease: "power1.inOut" },
   });
@@ -53,7 +52,6 @@ export function setupScrollAnimationsReduced(
       start: "top center",
       end: "bottom center",
       scrub: true,
-      markers: true,
     },
     defaults: { ease: "power1.inOut" },
   });
@@ -87,7 +85,6 @@ export function setupScrollAnimationsReduced(
       start: "top 20%",
       end: "bottom center",
       scrub: true,
-      markers: true,
     },
     defaults: { ease: "power1.inOut" },
   });
@@ -107,7 +104,6 @@ export function setupScrollAnimationsReduced(
       start: "top center",
       end: "bottom center",
       scrub: true,
-      markers: true,
     },
     defaults: { ease: "power1.inOut" },
   });

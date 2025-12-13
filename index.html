@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/dark.png" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,87 +11,212 @@
   <body>
     <main class="w-full bg-amber-50/30">
       <!-- 1 - HOME -->
-      <canvas
-        id="canvas"
-        class="pointer-events-none fixed inset-0 w-screen h-screen"
-      ></canvas>
+      <!-- NAVBAR -->
+      <nav
+        id="navbar"
+        class="fixed backdrop-blur-md top-0 left-0 right-0 z-50 transform transition-all duration-300 bg-transparent py-5"
+      >
+        <!-- El nav es fixed, no ocupa espacio en el flujo del DOM -->
+        <div
+          class="container mx-auto px-4 md:px-6 flex items-center justify-between"
+        >
+          <a href="/" class="text-xl md:text-2xl font-bold tracking-tight z-50">
+            A CONTRA<span class="text-primary">.</span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center gap-8">
+            <a
+              href="#home"
+              class="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Home
+            </a>
+            <a
+              href="#info"
+              class="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Info
+            </a>
+            <a
+              href="#about"
+              class="text-sm font-medium hover:text-primary transition-colors"
+            >
+              About Us
+            </a>
+            <a
+              href="#contact"
+              class="rounded-full px-6 py-2 text-sm font-medium shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all bg-primary text-white"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
       <section
         id="home"
         class="relative min-h-screen flex items-center pt-20 pb-10 overflow-hidden"
       >
         <!-- Background Gradients -->
 
-        <div
-          class="container mx-auto px-4 md:px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center"
-        >
-          <div
-            class="flex flex-col gap-6 max-w-2xl animate-in fade-in slide-in-from-bottom-10 duration-700"
-          >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid gap-10 items-center min-[1250px]:grid-cols-2">
             <div
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-secondary text-xs font-medium text-foreground/80 w-fit"
+              class="flex flex-col gap-6 max-w-2xl mx-auto min-[1250px]:mx-0 animate-in fade-in slide-in-from-bottom-10 duration-700 text-center min-[1250px]:text-left"
             >
-              <span class="relative flex h-2 w-2">
-                <span
-                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
-                ></span>
-                <span
-                  class="relative inline-flex rounded-full h-2 w-2 bg-primary"
-                ></span>
-              </span>
-              A Contra Digital Strategy
-            </div>
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-secondary text-xs font-medium text-foreground/80 w-fit mx-auto min-[1250px]:mx-0"
+              >
+                <span class="relative flex h-2 w-2">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-2 w-2 bg-primary"
+                  ></span>
+                </span>
+                A Contra Digital Strategy
+              </div>
 
-            <h1
-              class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]"
-            >
-              Estrategia digital en la que puedes
-              <span class="text-primary relative">
-                confiar
-                <svg
-                  class="absolute w-full h-3 -bottom-1 left-0 text-primary/30"
-                  viewBox="0 0 100 10"
-                  preserveAspectRatio="none"
+              <h1
+                class="text-4xl sm:text-5xl md:text-6xl min-[1250px]:text-7xl font-bold tracking-tight leading-[1.1]"
+              >
+                Estrategia digital en la que puedes
+                <span class="text-primary relative inline-block">
+                  confiar
+                  <svg
+                    class="absolute w-full h-3 -bottom-1 left-0 text-primary/30"
+                    viewBox="0 0 100 10"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0 5 Q 50 10 100 5"
+                      stroke="currentColor"
+                      stroke-width="4"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+              </h1>
+
+              <p
+                class="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto min-[1250px]:mx-0"
+              >
+                No necesitas una agencia, necesitas resultados con carácter.
+                Creamos experiencias digitales que conectan y venden.
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row gap-4 mt-4 justify-center min-[1250px]:justify-start"
+              >
+                <a
+                  href="#contacto"
+                  class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-1 transition-all bg-primary text-white font-medium w-full sm:w-auto"
                 >
-                  <path
-                    d="M0 5 Q 50 10 100 5"
-                    stroke="currentColor"
-                    stroke-width="4"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-            </h1>
-
-            <p
-              class="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg"
-            >
-              No necesitas una agencia, necesitas resultados con carácter.
-              Creamos experiencias digitales que conectan y venden.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4 mt-4">
-              <a
-                href="#contacto"
-                class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-1 transition-all bg-primary text-white font-medium"
-              >
-                Contáctanos
-              </a>
-              <a
-                href="#contacto"
-                class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base border-2 border-primary/60 bg-transparent hover:bg-secondary/50 text-foreground font-medium"
-              >
-                Saber más
-              </a>
+                  Contáctanos
+                </a>
+                <a
+                  href="#contacto"
+                  class="inline-flex items-center justify-center rounded-full px-8 h-12 text-base border-2 border-primary/60 bg-transparent hover:bg-secondary/50 text-foreground font-medium w-full sm:w-auto"
+                >
+                  Saber más
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- MOBILE / TABLET ( < xl ) -->
+      <div class="xl:hidden w-full flex justify-center px-4 py-12">
+        <div
+          class="relative w-full max-w-[560px] rounded-[2.5rem] overflow-hidden bg-secondary/30 border border-amber-100 shadow-xl"
+        >
+          <div
+            class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/15 blur-[70px]"
+          ></div>
+          <div
+            class="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-amber-200/40 blur-[80px]"
+          ></div>
+
+          <div class="relative p-7 sm:p-9">
+            <div class="flex items-center justify-between gap-4">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider"
+              >
+                <span class="relative flex h-2 w-2">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-2 w-2 bg-primary"
+                  ></span>
+                </span>
+                Mascota 3D
+              </div>
+            </div>
+
+            <h3
+              class="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-foreground"
+            >
+              Conoce a nuestra mascota<span class="text-primary">.</span>
+            </h3>
+
+            <p
+              class="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed"
+            >
+              Un vistazo rápido a nuestro estilo: diseño, tecnología y carácter
+              en 3D.
+            </p>
+
+            <div class="mt-6">
+              <div
+                class="relative w-full aspect-square rounded-3xl overflow-hidden bg-amber-50/30 border border-amber-100 shadow-md"
+              >
+                <canvas
+                  id="canvas-mobile"
+                  class="absolute inset-0 w-full h-full block"
+                ></canvas>
+
+                <div
+                  class="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/60 backdrop-blur-md border border-white/40 px-4 py-3 shadow-sm"
+                >
+                  <p class="text-xs sm:text-sm text-foreground/80">
+                    Tip: desliza para ver el modelo.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex gap-3">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full px-6 h-11 text-sm font-medium bg-primary text-white shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all w-full"
+              >
+                Quiero uno así
+              </a>
+              <a
+                href="#que-hacemos"
+                class="inline-flex items-center justify-center rounded-full px-6 h-11 text-sm font-medium border-2 border-primary/60 bg-transparent hover:bg-secondary/40 transition-all w-full"
+              >
+                Ver servicios
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESKTOP ( >= xl ) -->
+      <canvas
+        id="canvas-desktop"
+        class="pointer-events-none fixed inset-0 w-screen h-screen hidden xl:block"
+      ></canvas>
 
       <!-- 2 - RELLENO -->
       <section
         id="relleno1"
         aria-hidden="true"
-        class="min-h-screen flex items-center justify-center text-slate-200"
+        class="min-h-[100px] xl:min-h-screen flex items-center justify-center text-slate-200"
       ></section>
       <div id="rellenoEnd1" class="h-[1vh]"></div>
 
@@ -98,7 +224,7 @@
       <section id="que-hacemos" class="py-20 relative">
         <div class="container mx-auto px-4 md:px-6">
           <!-- Bloque completo alineado a la derecha en desktop -->
-          <div class="max-w-200 md:ml-auto">
+          <div class="mx-4 xl:max-w-160 xl:ml-auto">
             <div class="text-center max-w-2xl md:ml-auto mx-auto mb-16">
               <h2 class="text-3xl md:text-4xl font-bold mb-4">
                 ¿Qué hacemos en solo 20 segundos?
@@ -141,7 +267,7 @@
                 </p>
 
                 <a
-                  href="/contact"
+                  href="#contact"
                   class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer"
                 >
                   <span>Saber más</span>
@@ -195,7 +321,7 @@
                 </p>
 
                 <a
-                  href="/contact"
+                  href="#contact"
                   class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer"
                 >
                   <span>Saber más</span>
@@ -250,7 +376,7 @@
                 </p>
 
                 <a
-                  href="/contact"
+                  href="#contact"
                   class="flex justify-center items-center text-primary font-medium text-sm group-hover:gap-2 transition-all cursor-pointer"
                 >
                   <span>Saber más</span>
@@ -282,33 +408,43 @@
       <section
         id="relleno2"
         aria-hidden="true"
-        class="min-h-screen flex items-center justify-center text-slate-200"
+        class="min-h-[100px] xl:min-h-screen flex items-center justify-center text-slate-200"
       ></section>
       <div id="rellenoEnd2" class="h-[1vh]"></div>
 
-      <section class="py-20 space-y-24">
+      <section id="info" class="py-20 space-y-24">
         <!-- Web 3D Section -->
-        <div class="container mx-auto px-4 md:px-6 grid grid-cols-2">
+        <div
+          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2"
+        >
           <div
-            class="order-1 lg:order-1 space-y-6 relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden bg-secondary/40 p-4 flex justify-center flex-col px-16"
+            class="order-1 lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10"
           >
             <!-- Texto -->
-            <div class="order-1 lg:order-2 space-y-6">
+            <div class="space-y-5 sm:space-y-6">
               <div
-                class="inline-block px-3 py-1 rounded-full bg-orange-100 text-primary text-xs font-bold uppercase tracking-wider"
+                class="inline-block px-3 py-1 rounded-full bg-orange-100 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider"
               >
                 Desarrollo
               </div>
-              <h2 class="text-3xl md:text-5xl font-bold">Desarrollo Web 3D</h2>
-              <p class="text-lg text-muted-foreground leading-relaxed">
+              <h2
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+              >
+                Desarrollo Web 3D
+              </h2>
+              <p
+                class="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl"
+              >
                 Transformamos la web plana en experiencias espaciales. Desde el
                 modelado hasta la implementación, creamos entornos digitales que
                 cuentan historias y definen marcas.
               </p>
-              <ul class="space-y-3">
-                <li class="flex items-center gap-3 font-medium">
+              <ul class="space-y-3 sm:space-y-4">
+                <li
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                >
                   <div
-                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center"
+                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
                     <!-- Lucide Check -->
                     <svg
@@ -325,11 +461,13 @@
                       <polyline points="22 4 12 14.01 9 11.01" />
                     </svg>
                   </div>
-                  Modelado de alta fidelidad
+                  <span>Modelado de alta fidelidad</span>
                 </li>
-                <li class="flex items-center gap-3 font-medium">
+                <li
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                >
                   <div
-                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center"
+                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
                     <svg
                       class="w-3.5 h-3.5 text-primary"
@@ -345,11 +483,13 @@
                       <polyline points="22 4 12 14.01 9 11.01" />
                     </svg>
                   </div>
-                  Experiencias interactivas
+                  <span>Experiencias interactivas</span>
                 </li>
-                <li class="flex items-center gap-3 font-medium">
+                <li
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                >
                   <div
-                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center"
+                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
                     <svg
                       class="w-3.5 h-3.5 text-primary"
@@ -365,11 +505,13 @@
                       <polyline points="22 4 12 14.01 9 11.01" />
                     </svg>
                   </div>
-                  Optimización de rendimiento
+                  <span>Optimización de rendimiento</span>
                 </li>
-                <li class="flex items-center gap-3 font-medium">
+                <li
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                >
                   <div
-                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center"
+                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
                     <svg
                       class="w-3.5 h-3.5 text-primary"
@@ -385,39 +527,46 @@
                       <polyline points="22 4 12 14.01 9 11.01" />
                     </svg>
                   </div>
-                  Estilo definido y único
+                  <span>Estilo definido y único</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+
         <!-- RRHH Section -->
-        <div class="container mx-auto px-4 md:px-6 grid grid-cols-2">
+        <div
+          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2"
+        >
           <div
-            class="order-1 lg:order-1 space-y-6 relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden bg-secondary/40 p-4 flex justify-center flex-col px-16"
+            class="order-1 lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10"
           >
             <!-- Texto -->
-            <div>
+            <div class="space-y-5 sm:space-y-6">
               <div
-                class="inline-block px-3 py-1 rounded-full text-yellow-700 text-xs font-bold uppercase tracking-wider bg-yellow-100"
+                class="inline-block px-3 py-1 rounded-full text-yellow-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-yellow-100"
               >
                 Talento
               </div>
-              <h2 class="text-3xl md:text-5xl font-bold mt-3">
+              <h2
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 leading-tight"
+              >
                 Gestión de RRHH
               </h2>
-              <p class="text-lg text-muted-foreground leading-relaxed mt-2">
+              <p
+                class="text-base sm:text-lg text-muted-foreground leading-relaxed mt-2 max-w-xl"
+              >
                 Encontrar talento real que encaja de verdad con tu empresa no es
                 suerte, es estrategia. Utilizamos metodologías modernas para
                 conectar empresas con las personas adecuadas.
               </p>
 
               <!-- Lista con iconos (mismos colores que Marketing) -->
-              <ul class="mt-6 space-y-4">
+              <ul class="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
                 <!-- Scouting -->
                 <li class="flex items-start gap-3">
                   <span
-                    class="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/20"
+                    class="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 flex-shrink-0"
                   >
                     <!-- Lucide Users -->
                     <svg
@@ -437,7 +586,7 @@
                     </svg>
                   </span>
                   <div>
-                    <p class="text-sm md:text-base font-medium">
+                    <p class="text-sm sm:text-base font-medium">
                       Scouting proactivo de talento.
                     </p>
                   </div>
@@ -446,7 +595,7 @@
                 <!-- Selección basada en datos -->
                 <li class="flex items-start gap-3">
                   <span
-                    class="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full bg-primary/20"
+                    class="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 flex-shrink-0"
                   >
                     <!-- Lucide LineChart -->
                     <svg
@@ -464,7 +613,7 @@
                     </svg>
                   </span>
                   <div>
-                    <p class="text-sm md:text-base font-medium">
+                    <p class="text-sm sm:text-base font-medium">
                       Selección basada en datos.
                     </p>
                   </div>
@@ -473,7 +622,7 @@
                 <!-- Onboarding y seguimiento -->
                 <li class="flex items-start gap-3">
                   <span
-                    class="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full bg-primary/20"
+                    class="mt-[2px] flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 flex-shrink-0"
                   >
                     <!-- Lucide CheckCircle -->
                     <svg
@@ -491,7 +640,7 @@
                     </svg>
                   </span>
                   <div>
-                    <p class="text-sm md:text-base font-medium">
+                    <p class="text-sm sm:text-base font-medium">
                       Onboarding y acompañamiento.
                     </p>
                   </div>
@@ -502,30 +651,38 @@
         </div>
 
         <!-- Marketing Section -->
-        <div class="container mx-auto px-4 md:px-6 grid grid-cols-2">
+        <div
+          class="container text-center mx-auto px-4 xl:px-6 grid grid-cols-1 xl:grid-cols-2"
+        >
           <div
-            class="order-1 lg:order-1 space-y-6 relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden bg-secondary/40 p-4 flex justify-center flex-col px-16"
+            class="order-1 text-center lg:order-1 space-y-6 relative rounded-3xl overflow-hidden bg-secondary/40 flex justify-center flex-col h-auto sm:h-[380px] md:h-[440px] p-6 sm:p-8 lg:px-16 lg:py-10"
           >
             <!-- Texto marketing -->
-            <div>
+            <div class="space-y-5 text-centersm:space-y-6">
               <div
-                class="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-bold uppercase tracking-wider"
+                class="inline-block text-center px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider"
               >
                 Marketing
               </div>
-              <h2 class="text-3xl md:text-5xl font-bold mt-3">
+              <h2
+                class="text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 leading-tight"
+              >
                 Estrategia de Marketing Digital
               </h2>
-              <p class="text-lg text-muted-foreground leading-relaxed mt-3">
+              <p
+                class="text-center sm:text-lg text-muted-foreground leading-relaxed mt-3 max-w-xl"
+              >
                 Diseñamos campañas que no solo generan clics, sino clientes
                 recurrentes. Mezclamos creatividad y datos para que cada euro
                 invertido tenga un retorno claro.
               </p>
 
-              <ul class="mt-5 space-y-3">
-                <li class="flex items-center gap-3 font-medium">
+              <ul class="mt-4 sm:mt-5 space-y-3 sm:space-y-4">
+                <li
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                >
                   <div
-                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center"
+                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
                     <!-- Lucide Megaphone -->
                     <svg
@@ -544,11 +701,13 @@
                       />
                     </svg>
                   </div>
-                  Mensajes que conectan con tu público
+                  <span>Mensajes que conectan con tu público</span>
                 </li>
-                <li class="flex items-center gap-3 font-medium">
+                <li
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                >
                   <div
-                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center"
+                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
                     <!-- LineChart -->
                     <svg
@@ -565,11 +724,13 @@
                       <path d="m19 9-5 5-4-4-4 4" />
                     </svg>
                   </div>
-                  Optimización constante basada en datos
+                  <span>Optimización constante basada en datos</span>
                 </li>
-                <li class="flex items-center gap-3 font-medium">
+                <li
+                  class="flex items-center gap-3 text-sm sm:text-base font-medium"
+                >
                   <div
-                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center"
+                    class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0"
                   >
                     <!-- Lucide Users -->
                     <svg
@@ -588,7 +749,7 @@
                       <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                     </svg>
                   </div>
-                  Construcción de comunidad y marca a largo plazo
+                  <span>Construcción de comunidad y marca a largo plazo</span>
                 </li>
               </ul>
             </div>
@@ -600,7 +761,7 @@
       <section
         id="relleno3"
         aria-hidden="true"
-        class="min-h-screen flex items-center justify-center text-slate-200"
+        class="min-h-[10vh] xl:min-h-screen flex items-center justify-center text-slate-200"
       ></section>
       <div id="rellenoEnd3" class="h-[1vh]"></div>
 
@@ -685,7 +846,7 @@
       <section
         id="relleno4"
         aria-hidden="true"
-        class="min-h-screen flex items-center justify-center text-slate-200"
+        class="min-h-[100px] xl:min-h-screen flex items-center justify-center text-slate-200"
       ></section>
       <div id="rellenoEnd4" class="h-[1vh]"></div>
 
@@ -709,17 +870,30 @@
                 Es el primer paso para poner tu proyecto en marcha.
               </p>
 
-              <form class="space-y-6">
+              <form id="contact-form" class="space-y-6" novalidate>
+                <!-- Honeypot anti-bots -->
+                <input
+                  type="text"
+                  name="company"
+                  autocomplete="off"
+                  tabindex="-1"
+                  class="hidden"
+                  aria-hidden="true"
+                />
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div class="space-y-1">
                     <label
+                      for="contact-name"
                       class="text-xs tracking-wider text-muted-foreground uppercase"
                     >
                       Nombre
                     </label>
                     <input
+                      id="contact-name"
                       required
                       name="name"
+                      autocomplete="name"
                       class="w-full px-4 py-3 rounded-xl bg-white border border-border/40 outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition"
                       placeholder="Tu nombre"
                     />
@@ -727,14 +901,17 @@
 
                   <div class="space-y-1">
                     <label
+                      for="contact-email"
                       class="text-xs tracking-wider text-muted-foreground uppercase"
                     >
                       Email
                     </label>
                     <input
+                      id="contact-email"
                       required
                       type="email"
                       name="email"
+                      autocomplete="email"
                       class="w-full px-4 py-3 rounded-xl bg-white border border-border/40 outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition"
                       placeholder="tucorreo@empresa.com"
                     />
@@ -743,11 +920,13 @@
 
                 <div class="space-y-1">
                   <label
+                    for="contact-service"
                     class="text-xs tracking-wider text-muted-foreground uppercase"
                   >
                     Qué necesitas
                   </label>
                   <select
+                    id="contact-service"
                     required
                     name="service"
                     class="w-full px-4 py-3 rounded-xl bg-white border border-border/40 outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition"
@@ -765,14 +944,17 @@
 
                 <div class="space-y-1">
                   <label
+                    for="contact-message"
                     class="text-xs tracking-wider text-muted-foreground uppercase"
                   >
                     Mensaje
                   </label>
                   <textarea
+                    id="contact-message"
                     required
                     rows="4"
                     name="message"
+                    autocomplete="off"
                     class="w-full px-4 py-3 rounded-xl bg-white border border-border/40 outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition resize-none"
                     placeholder="Cuéntanos tu proyecto, plazos, ideas..."
                   ></textarea>
@@ -780,11 +962,17 @@
 
                 <div class="pt-2">
                   <button
+                    id="contact-submit"
                     type="submit"
-                    class="w-full h-12 rounded-full text-base font-medium px-6 bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90 transition"
+                    class="w-full h-12 rounded-full text-base font-medium px-6 bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     Enviar mensaje
                   </button>
+
+                  <p
+                    id="contact-status"
+                    class="mt-3 text-sm text-muted-foreground"
+                  ></p>
                 </div>
               </form>
             </div>
@@ -799,41 +987,46 @@
       ></section>
       <div id="rellenoEnd5" class="h-[1vh]"></div>
 
-      <!-- <footer
+      <footer
         id="footer"
-        class="footer bg-secondary/30 py-12 border-t border-border/50"
+        class="footer bg-secondary/30 py-4 md:py-6 border-t border-border/50 w-full"
       >
         <div class="container mx-auto px-4 md:px-6">
           <div
-            class="flex flex-col md:flex-row justify-between items-center gap-8"
+            class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8"
           >
             <div class="text-center md:text-left">
               <a href="/" class="text-2xl font-bold tracking-tight">
                 A CONTRA<span class="text-primary">.</span>
               </a>
               <p class="text-sm text-muted-foreground mt-2">
-                © 2024 Todos los derechos reservados.
+                © 2025 Todos los derechos reservados.
+              </p>
+              <p class="text-[10px] text-muted-foreground mt-0.5">
+                page created by Neudys Napoleón Tejada Henriquez.
               </p>
             </div>
 
             <div
-              class="flex flex-wrap justify-center gap-8 text-sm font-medium"
+              class="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium"
             >
-              <a href="/" class="hover:text-primary transition-colors">Home</a>
+              <a href="#home" class="hover:text-primary transition-colors"
+                >Home</a
+              >
               <a href="#info" class="hover:text-primary transition-colors"
                 >Info</a
               >
               <a href="#about" class="hover:text-primary transition-colors"
                 >About Us</a
               >
-              <a href="#contacto" class="hover:text-primary transition-colors"
+              <a href="#contact" class="hover:text-primary transition-colors"
                 >Contact</a
               >
             </div>
 
             <div class="flex gap-4">
               <a
-                href="#"
+                href=""
                 class="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-sm"
                 aria-label="Twitter"
               >
@@ -855,7 +1048,7 @@
               </a>
 
               <a
-                href="#"
+                href=""
                 class="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-sm"
                 aria-label="Instagram"
               >
@@ -880,7 +1073,7 @@
             </div>
           </div>
         </div>
-      </footer> -->
+      </footer>
     </main>
 
     <script type="module" src="/src/main.ts"></script>

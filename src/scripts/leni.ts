@@ -12,3 +12,27 @@ function raf(time: any) {
 }
 
 requestAnimationFrame(raf);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const anchorLinks =
+    document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
+
+  anchorLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+      if (!href || href === "#") return;
+
+      const targetId = href.substring(1);
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+
+      event.preventDefault();
+
+      // Ajusta el offset si tienes un navbar fijo arriba (por ejemplo 80px)
+      lenis.scrollTo(targetEl, {
+        offset: -80, // cambia este valor según la altura de tu navbar
+        duration: 1.2,
+      });
+    });
+  });
+});

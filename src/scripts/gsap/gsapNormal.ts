@@ -60,7 +60,7 @@ export function setupScrollAnimations(
     bearModel.position,
     {
       x: 4.5,
-      z: -1,
+      z: -1.1,
       y: 1.2,
     },
     0
@@ -128,26 +128,26 @@ export function setupScrollAnimations(
     0
   );
 
-//   // ======================
-//   // RELLENO 5
-//   // ======================
-//   const tlR5 = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#relleno5",
-//       endTrigger: "#footrer",
-//       start: "top bottom", // bottom del viewport ≈ top de relleno5
-//       end: "bottom bottom", // bottom del viewport ≈ bottom de relleno5
-//       scrub: true,
-//       markers: true,
-//     },
-//     defaults: { ease: "power1.inOut" },
-//   });
+  //   // ======================
+  //   // RELLENO 5
+  //   // ======================
+  //   const tlR5 = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: "#relleno5",
+  //       endTrigger: "#footrer",
+  //       start: "top bottom", // bottom del viewport ≈ top de relleno5
+  //       end: "bottom bottom", // bottom del viewport ≈ bottom de relleno5
+  //       scrub: true,
+  //       markers: true,
+  //     },
+  //     defaults: { ease: "power1.inOut" },
+  //   });
 
-//   tlR5.to(
-//     bearModel.position,
-//     {
-//       y: "+=" + 0.7,
-//     },
-//     0
-//   );
+  //   tlR5.to(
+  //     bearModel.position,
+  //     {
+  //       y: "+=" + 0.7,
+  //     },
+  //     0
+  //   );
 }
