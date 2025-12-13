@@ -2,6 +2,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+body.is-loading main {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 :root {
   /* Creating a palette based on Cream #F9E4C8, Warm Beige, Soft Orange, Deep Orange, Gold */
 

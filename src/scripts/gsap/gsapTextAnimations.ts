@@ -3,9 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-(() => {
-  // Si usas HMR, esto evita triggers duplicados
-  ScrollTrigger.getAll().forEach((t) => t.kill());
+export function initGsaps() {
 
   // =======================
   // NAVBAR (smooth)
@@ -360,4 +358,4 @@ gsap.registerPlugin(ScrollTrigger);
     if (actions)
       tlContact.to(actions, { opacity: 1, y: 0, duration: 0.3 }, "-=0.2");
   }
-})();
+}

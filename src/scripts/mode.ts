@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { setupScrollAnimations } from "./gsap/gsapNormal.js";
 import { setupScrollAnimationsReduced } from "./gsap/gsapReducido.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { createPageLoader } from "./loader.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -165,6 +166,8 @@ function init() {
 
   // Modelo
   const loader = new GLTFLoader();
+  const pageLoader = createPageLoader();
+
   loader.load(
     "/bear.glb",
     (gltf) => {
@@ -174,28 +177,31 @@ function init() {
       initializeBearModelPosition(bearModel);
       scene.add(bearModel);
 
-      // Animación
       if (gltf.animations.length > 0) {
         mixer = new THREE.AnimationMixer(bearModel);
         mixer.clipAction(gltf.animations[0]).play();
       }
 
-      // Orbit solo móvil
       setupMobileOrbitControls();
 
-      // Scroll animations solo desktop/tablet
       if (screenWidth <= 1800 && screenWidth >= 1280) {
         setupScrollAnimationsReduced(camera, bearModel);
       } else if (screenWidth > 1800) {
         setupScrollAnimations(camera, bearModel);
       }
 
-      // asegura target correcto (por si controls se creó después)
       updateControlsTargetAndDistance();
+
+      pageLoader.finish();
     },
-    undefined,
+    (xhr) => {
+      if (xhr.total && xhr.total > 0) {
+        pageLoader.setProgress(xhr.loaded / xhr.total);
+      }
+    },
     (error) => {
       console.error("Error cargando /bear.glb:", error);
+      pageLoader.finish();
     }
   );
 

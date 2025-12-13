@@ -2,7 +2,6 @@ import "./scripts/leni.js";
 import "./scripts/mode.ts";
 import "./scripts/navBar.ts";
 import { setupContactForm } from "./scripts/contact";
-import "./scripts/gsap/gsapTextAnimations.ts";
 
 setupContactForm();
 
